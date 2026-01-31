@@ -9,7 +9,7 @@ As a Data Science student, I built this end-to-end pipeline to automate expense 
 
 Unlike traditional OCR systems that require separate text detection and recognition modules, Donut (Document Understanding Transformer) operates as a unified **End-to-End** system:
 
-1. **Vision Encoder (Swin Transformer):** Processes the raw input image and converts it into a tensor of high-dimensional embeddings ($batch\_size, seq\_len, hidden\_size$).
+1. **Vision Encoder (Swin Transformer):** Processes the raw input image and converts it into a tensor of high-dimensional embeddings (batch_size, seq_len, hidden_size).
 2. **Text Decoder (BART):** An autoregressive decoder that takes those embeddings and generates structured text (JSON) one token at a time, conditioned on the visual features provided by the encoder.
 
 This OCR-free approach reduces error propagation and allows the model to understand the **spatial layout** of the receipt—which is why it can identify a "Total Price" even if the text is slightly bent.
