@@ -5,7 +5,7 @@ As a Data Science student, I built this end-to-end pipeline to automate expense 
 
 ### Architecture
 
-![Donut Transformer Diagram](assets/donut_architecture.jpg)
+![Donut Transformer Diagram](assets/donut_architecture.jpeg)
 
 Unlike traditional OCR systems that require separate text detection and recognition modules, Donut (Document Understanding Transformer) operates as a unified **End-to-End** system:
 
@@ -27,7 +27,7 @@ This OCR-free approach reduces error propagation and allows the model to underst
 
 ## How to Run
 1. Place receipt images in the `data/` folder.
-2. Run `python app.py`.
+2. Run `python app.py`.git add.
 3. Check `receipt_log.xlsx` for the structured output.
 
 ## !!!! Model Bias & Limitations
