@@ -32,6 +32,6 @@ This OCR-free approach reduces error propagation and allows the model to underst
 
 ## !!!! Model Bias & Limitations
 As part of my analysis, I identified a specific **domain bias** in the underlying model:
-* **Training Source:** The model was fine-tuned on the **CORD dataset** (Consolidated Receipt Dataset), which primarily consists of restaurant and retail receipts.
+* **Training Source:** The model was fine-tuned on the [CORD dataset](https://github.com/clovaai/cord) (Consolidated Receipt Dataset), which primarily consists of restaurant and retail receipts.
 * **Impact:** When processing specialized documents like petrol/fuel bills, the model maps data to its known schema (e.g., labeling fuel types as `menu_item` or liters as `count`).
 * **Future Work:** To improve accuracy for specific industries (like logistics or petrol bills), the model would benefit from fine-tuning on the **SROIE dataset** or custom-annotated local invoices.
