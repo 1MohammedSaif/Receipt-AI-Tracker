@@ -5,7 +5,7 @@ As a Data Science student, I built this end-to-end pipeline to automate expense 
 
 ### Architecture
 
-![Donut Transformer Diagram](donut_architecture.jpg)
+![Donut Transformer Diagram](/donut_architecture.jpg)
 
 Unlike traditional OCR systems that require separate text detection and recognition modules, Donut (Document Understanding Transformer) operates as a unified **End-to-End** system:
 
