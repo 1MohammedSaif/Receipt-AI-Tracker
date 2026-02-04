@@ -15,7 +15,7 @@ Unlike traditional OCR systems that require separate text detection and recognit
 This OCR-free approach reduces error propagation and allows the model to understand the **spatial layout** of the receipt—which is why it can identify a "Total Price" even if the text is slightly bent.
 
 ## Live Demo
-[Click here to try the Live App on Streamlit Cloud] (https://receipt-ai-tracker-m3ybca32bry6ckfzmg4crd.streamlit.app/)
+[Click here to try the Live App on Streamlit Cloud](https://receipt-ai-tracker-m3ybca32bry6ckfzmg4crd.streamlit.app/)
 
 ## Tech Stack
 * **Deep Learning:** Hugging Face Transformers, PyTorch
