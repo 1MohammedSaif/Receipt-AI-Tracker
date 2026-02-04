@@ -5,7 +5,7 @@ As a Data Science student, I built this end-to-end pipeline to automate expense 
 
 ### Architecture
 
-![Donut Transformer Diagram](donut_architecture.jpg)
+![Donut Transformer Diagram](/donut_architecture.jpg)
 
 Unlike traditional OCR systems that require separate text detection and recognition modules, Donut (Document Understanding Transformer) operates as a unified **End-to-End** system:
 
@@ -13,6 +13,9 @@ Unlike traditional OCR systems that require separate text detection and recognit
 2. **Text Decoder (BART):** An autoregressive decoder that takes those embeddings and generates structured text (JSON) one token at a time, conditioned on the visual features provided by the encoder.
 
 This OCR-free approach reduces error propagation and allows the model to understand the **spatial layout** of the receipt—which is why it can identify a "Total Price" even if the text is slightly bent.
+
+## Live Demo
+[Click here to try the Live App on Streamlit Cloud] (https://receipt-ai-tracker-m3ybca32bry6ckfzmg4crd.streamlit.app/)
 
 ## Tech Stack
 * **Deep Learning:** Hugging Face Transformers, PyTorch
@@ -32,6 +35,6 @@ This OCR-free approach reduces error propagation and allows the model to underst
 
 ## !!!! Model Bias & Limitations
 As part of my analysis, I identified a specific **domain bias** in the underlying model:
-* **Training Source:** The model was fine-tuned on the **CORD dataset** (Consolidated Receipt Dataset), which primarily consists of restaurant and retail receipts.
+* **Training Source:** The model was fine-tuned on the [CORD dataset](https://github.com/clovaai/cord) (Consolidated Receipt Dataset), which primarily consists of restaurant and retail receipts.
 * **Impact:** When processing specialized documents like petrol/fuel bills, the model maps data to its known schema (e.g., labeling fuel types as `menu_item` or liters as `count`).
 * **Future Work:** To improve accuracy for specific industries (like logistics or petrol bills), the model would benefit from fine-tuning on the **SROIE dataset** or custom-annotated local invoices.
